@@ -214,27 +214,19 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function saveContact() {
-  const vcard = [
-    'BEGIN:VCARD',
-    'VERSION:3.0',
-    'FN:Tammy Tran',
-    'ORG:Nyxglo',
-    'TITLE:Co-founder & CEO',
-    'EMAIL:tammy@nyxglo.com',
-    'TEL:+14804208717',
-    'URL:https://nyxglo.com',
-    'NOTE:Instagram & TikTok: @nyxglolights',
-    'END:VCARD'
-  ].join('\r\n');
-
-  const blob = new Blob([vcard], { type: 'text/vcard' });
-  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
+  a.href = 'tammy.vcf';
   a.download = 'tammy-tran-nyxglo.vcf';
   a.click();
-  URL.revokeObjectURL(url);
 
-  const btn = document.getElem
+  const btn = document.getElementById('saveBtn');
+  btn.textContent = '✓ Contact Saved';
+  btn.classList.add('saved');
+  setTimeout(() => {
+    btn.textContent = '+ Save Contact';
+    btn.classList.remove('saved');
+  }, 3000);
+}
+</script>
