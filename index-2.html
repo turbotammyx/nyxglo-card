@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tammy Tran · Nyxglo</title>
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tomorrow', sans-serif;
+    padding: 2rem 1rem;
+  }
+  .card {
+    width: 100%;
+    max-width: 380px;
+    background: #0e0e1a;
+    border: 1px solid #1a1a2e;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .card-header {
+    background: linear-gradient(135deg, #0d0d1f 0%, #0a0a18 100%);
+    padding: 2rem 1.5rem 1.5rem;
+    border-bottom: 1px solid #1a1a2e;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,255,255,0.08) 0%, transparent 70%);
+  }
+  .card-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(160,32,240,0.08) 0%, transparent 70%);
+  }
+  .logo {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: #00e5ff;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  .name {
+    font-size: 28px;
+    font-weight: 600;
+    color: #f0f0ff;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .title {
+    font-size: 13px;
+    color: #8080a0;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+  .accent-line {
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #00e5ff, #a020f0);
+    margin: 1rem 0;
+  }
+  .card-body { padding: 1.5rem; }
+  .info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #15152a;
+  }
+  .info-row:last-of-type { border-bottom: none; }
+  .info-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: #13132a;
+    border: 1px solid #1e1e3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+  .info-label {
+    font-size: 10px;
+    color: #505070;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .info-value {
+    font-size: 14px;
+    color: #c0c0e0;
+    font-weight: 400;
+  }
+  .save-btn {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0 0;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid #00e5ff;
+    border-radius: 12px;
+    color: #00e5ff;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .save-btn:hover { background: rgba(0,229,255,0.08); }
+  .save-btn:active { transform: scale(0.98); }
+  .save-btn.saved {
+    border-color: #a020f0;
+    color: #a020f0;
+    background: rgba(160,32,240,0.08);
+  }
+  .socials {
+    display: flex;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+  .social-btn {
+    flex: 1;
+    padding: 0.6rem;
+    background: #13132a;
+    border: 1px solid #1e1e3a;
+    border-radius: 10px;
+    color: #8080a0;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-btn:hover {
+    border-color: #a020f0;
+    color: #c080ff;
+    background: rgba(160,32,240,0.06);
+  }
+  .glow-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00e5ff33, #a020f033, transparent);
+    margin: 1rem 0;
+  }
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: #303050;
+    text-align: center;
+    padding: 1rem 0 0.5rem;
+    font-weight: 300;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <div class="logo">NYXglo</div>
+    <div class="name">Tammy Tran</div>
+    <div class="title">Co-founder &amp; CEO</div>
+    <div class="accent-line"></div>
+  </div>
+  <div class="card-body">
+    <div class="info-row">
+      <div class="info-icon">✉</div>
+      <div>
+        <span class="info-label">Email</span>
+        <span class="info-value">tammy@nyxglo.com</span>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-icon">☎</div>
+      <div>
+        <span class="info-label">Phone</span>
+        <span class="info-value">480-420-8717</span>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-icon">🌐</div>
+      <div>
+        <span class="info-label">Website</span>
+        <span class="info-value">nyxglo.com</span>
+      </div>
+    </div>
+    <div class="glow-line"></div>
+    <div class="socials">
+      <a class="social-btn" href="https://instagram.com/nyxglolights" target="_blank">Instagram</a>
+      <a class="social-btn" href="https://tiktok.com/@nyxglolights" target="_blank">TikTok</a>
+      <a class="social-btn" href="https://nyxglo.com" target="_blank">Shop</a>
+    </div>
+    <button class="save-btn" id="saveBtn" onclick="saveContact()">+ Save Contact</button>
+    <div class="tag">NYXGLO · IN DARKNESS, YOU ARE THE LIGHT</div>
+  </div>
+</div>
+
+<script>
+function saveContact() {
+  const vcard = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'FN:Tammy Tran',
+    'ORG:Nyxglo',
+    'TITLE:Co-founder & CEO',
+    'EMAIL:tammy@nyxglo.com',
+    'TEL:+14804208717',
+    'URL:https://nyxglo.com',
+    'NOTE:Instagram & TikTok: @nyxglolights',
+    'END:VCARD'
+  ].join('\r\n');
+
+  const blob = new Blob([vcard], { type: 'text/vcard' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'tammy-tran-nyxglo.vcf';
+  a.click();
+  URL.revokeObjectURL(url);
+
+  const btn = document.getElementById('saveBtn');
+  btn.textContent = '✓ Contact Saved';
+  btn.classList.add('saved');
+  setTimeout(() => {
+    btn.textContent = '+ Save Contact';
+    btn.classList.remove('saved');
+  }, 3000);
+}
+</script>
+</body>
+</html>
