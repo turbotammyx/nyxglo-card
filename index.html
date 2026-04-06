@@ -186,7 +186,7 @@
       <div class="info-icon">✉</div>
       <div>
         <span class="info-label">Email</span>
-        <span class="info-value">tammy@nyxglo.com</span>
+        <span class="info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7703161a1a0e37190e0f101b185914181a">[email&#160;protected]</a></span>
       </div>
     </div>
     <div class="info-row">
@@ -206,15 +206,14 @@
     <div class="glow-line"></div>
     <div class="socials">
       <a class="social-btn" href="https://instagram.com/nyxglolights" target="_blank">Instagram</a>
-      <a class="social-btn" href="https://tiktok.com/@nyxglolights" target="_blank">TikTok</a>
-      <a class="social-btn" href="https://nyxglo.com" target="_blank">Shop</a>
+      <a class="social-btn" href="https://nyxglo.com" target="_blank">Website</a>
     </div>
     <button class="save-btn" id="saveBtn" onclick="saveContact()">+ Save Contact</button>
     <div class="tag">NYXGLO · IN DARKNESS, YOU ARE THE LIGHT</div>
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function saveContact() {
   const vcard = [
     'BEGIN:VCARD',
@@ -237,14 +236,4 @@ function saveContact() {
   a.click();
   URL.revokeObjectURL(url);
 
-  const btn = document.getElementById('saveBtn');
-  btn.textContent = '✓ Contact Saved';
-  btn.classList.add('saved');
-  setTimeout(() => {
-    btn.textContent = '+ Save Contact';
-    btn.classList.remove('saved');
-  }, 3000);
-}
-</script>
-</body>
-</html>
+  const btn = document.getElem
