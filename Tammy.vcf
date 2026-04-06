@@ -1,10 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
 FN:Tammy Tran
+N:Tran;Tammy;;;
 ORG:Nyxglo
 TITLE:Co-founder & CEO
-EMAIL:tammy@nyxglo.com
-TEL:+14804208717
+EMAIL;TYPE=WORK:tammy@nyxglo.com
+TEL;TYPE=CELL:+14804208717
 URL:https://nyxglo.com
-NOTE:Instagram: @nyxglolights
 END:VCARD
